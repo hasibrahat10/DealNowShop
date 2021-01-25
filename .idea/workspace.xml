@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d98b3295-3442-403b-ad44-2a5d47cdac8e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1nZP9E4cAhmbLtyWjGUIDdHgojv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\DealNowShop\src\test" />
+      <recent name="F:\DealNowShop" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="TestRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DealNowShop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="testRunner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="testRunner" />
+      <option name="MAIN_CLASS_NAME" value="testRunner.TestRunner" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestRunner" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d98b3295-3442-403b-ad44-2a5d47cdac8e" name="Default Changelist" comment="" />
+      <created>1611594485531</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611594485531</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="499" y="199" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1611594954239">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state x="499" y="199" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.40.1536.824@0.40.1536.824" timestamp="1611594954239" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1611595797449">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.40.1536.824@0.40.1536.824" timestamp="1611595797449" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1611595797449">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.40.1536.824@0.40.1536.824" timestamp="1611595797449" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1611595797449">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.40.1536.824@0.40.1536.824" timestamp="1611595797449" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1611595797449">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.40.1536.824@0.40.1536.824" timestamp="1611595797449" />
+    <state x="521" y="374" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog" timestamp="1611595611808">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state x="521" y="374" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog/0.40.1536.824@0.40.1536.824" timestamp="1611595611808" />
+  </component>
+</project>
