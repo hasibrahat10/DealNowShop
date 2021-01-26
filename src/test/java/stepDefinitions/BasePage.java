@@ -13,6 +13,17 @@ import java.util.logging.Logger;
 public class BasePage {
     public static WebDriver driver;
 
+    //Created for generating random string for unique email
+    public static String randomString() {
+        String generatedString = RandomStringUtils.randomAlphabetic(5);
+        return (generatedString);
+    }
+
+    public static String randomEmail() {
+        String emailID = "hasib" + new Faker().number().digits(3) + "@yopmail.com";
+        return (emailID);
+    }
+
     public void startDriver() {
 
         ChromeOptions chromeOptions = new ChromeOptions();
@@ -25,13 +36,11 @@ public class BasePage {
 
     }
 
-
     public void stopDriver() {
         if (driver != null) {
             driver.quit();
         }
     }
-
 
     public void sleepFor(int seconds) {
         try {
@@ -39,17 +48,6 @@ public class BasePage {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-    }
-
-    //Created for generating random string for unique email
-    public static String randomString(){
-        String generatedString = RandomStringUtils.randomAlphabetic(5);
-        return (generatedString);
-    }
-
-    public static String randomEmail(){
-        String emailID = "hasib"+new Faker().number().digits(3)+"@yopmail.com";
-        return (emailID);
     }
 
 

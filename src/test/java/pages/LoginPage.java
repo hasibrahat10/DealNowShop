@@ -1,6 +1,5 @@
 package pages;
 
-import helper.WaitHelper;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -10,8 +9,17 @@ public class LoginPage extends BasePage {
 
 
     // To Find the Elements for the Login Page
+    @FindBy(id = "email")
+    WebElement emailID;
 
+    @FindBy(id = "password")
+    WebElement password;
 
+    @FindBy(xpath = "//button[text()='Sign In']")
+    WebElement signIn;
+
+    @FindBy(xpath = "//div[text()='Please check your credentials and try again.' and @class='alert-wrapper']")
+    WebElement alertError;
 
 
     //constructor define
@@ -21,11 +29,38 @@ public class LoginPage extends BasePage {
 
     //Custom method declare for the Login steps
 
-    public String getPageTitle (){
+    public String getPageTitle() {
         return driver.getTitle();
     }
 
+    public void setSignIn(String email, String pass) {
+        emailID.clear();
+        emailID.sendKeys(email);
 
+        password.clear();
+        password.sendKeys(pass);
+
+        sleepFor(3);
+    }
+
+    public void clickSignIn() {
+        signIn.click();
+
+    }
+
+    public void invalidInfo() {
+        emailID.clear();
+        emailID.sendKeys("hasib@gmail.com");
+
+        password.clear();
+        password.sendKeys("test12345");
+
+    }
+
+    public String checkTextDisplayed(){
+        String textError = alertError.getText();
+        return textError;
+    }
 
 
 }
