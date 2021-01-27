@@ -30,9 +30,16 @@ public class LoginSteps extends BasePage {
     }
 
 
-
     @Then("An error message will be displayed {string}")
     public void anErrorMessageWillBeDisplayed(String expectedText) {
         Assert.assertEquals(expectedText, new LoginPage().checkTextDisplayed());
     }
+
+
+    @Then("I get an error message from the email and password field")
+    public void iGetAnErrorMessageFromTheEmailAndPasswordField() {
+        Assert.assertEquals(new LoginPage().verifyErrorMessageIsDisplayed(), true);
+    }
+
+
 }

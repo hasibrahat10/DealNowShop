@@ -21,6 +21,12 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "//div[text()='Please check your credentials and try again.' and @class='alert-wrapper']")
     WebElement alertError;
 
+    @FindBy(xpath = "//span[text()='The \"Email\" field is required']")
+    WebElement emailError;
+
+    @FindBy(xpath = "//span[text()='The \"Password\" field is required']")
+    WebElement passwordError;
+
 
     //constructor define
     public LoginPage() {
@@ -45,6 +51,7 @@ public class LoginPage extends BasePage {
 
     public void clickSignIn() {
         signIn.click();
+        sleepFor(3);
 
     }
 
@@ -57,9 +64,13 @@ public class LoginPage extends BasePage {
 
     }
 
-    public String checkTextDisplayed(){
+    public String checkTextDisplayed() {
         String textError = alertError.getText();
         return textError;
+    }
+
+    public boolean verifyErrorMessageIsDisplayed() {
+        return emailError.isDisplayed() && passwordError.isDisplayed();
     }
 
 

@@ -2,7 +2,9 @@ package stepDefinitions;
 
 import com.github.javafaker.Faker;
 import org.apache.commons.lang.RandomStringUtils;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -12,6 +14,7 @@ import java.util.logging.Logger;
 
 public class BasePage {
     public static WebDriver driver;
+    public static JavascriptExecutor js;
 
     //Created for generating random string for unique email
     public static String randomString() {
@@ -24,8 +27,23 @@ public class BasePage {
         return (emailID);
     }
 
-    public void startDriver() {
+    public static void scrollDown() {
+        // This  will scroll down the page by  1000 pixel vertical
+        js.executeScript("window.scrollBy(0, 1000)");
+    }
 
+    public static void scrollDown(int count) {
+        // This  will scroll down the page by  1000 pixel vertical
+        for (int i = 0; i < count; i++) {
+            js.executeScript("window.scrollBy(0, 300)");
+        }
+    }
+
+    public static void scrollDownToElement(WebElement element) {
+        js.executeScript("arguments[0].scrollIntoView();", element);
+    }
+
+    public void startDriver() {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--ignore-certificate-errors");
         System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY, System.getProperty("user.dir") + "/drivers/chromedriver_win32/chromedriver.exe");
@@ -33,12 +51,22 @@ public class BasePage {
         System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY, "true");
         Logger.getLogger("").setLevel(Level.OFF);
         driver = new ChromeDriver(chromeOptions);
+        js = (JavascriptExecutor) driver;
+
 
     }
 
     public void stopDriver() {
         if (driver != null) {
             driver.quit();
+        }
+    }
+
+    public void sleepFor() {
+        try {
+            Thread.sleep(1000 * 5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 
@@ -49,6 +77,5 @@ public class BasePage {
             e.printStackTrace();
         }
     }
-
 
 }
