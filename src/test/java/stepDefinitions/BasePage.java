@@ -61,8 +61,6 @@ public class BasePage {
         Logger.getLogger("").setLevel(Level.OFF);
         driver = new ChromeDriver(chromeOptions);
         js = (JavascriptExecutor) driver;
-
-
     }
 
     public void stopDriver() {

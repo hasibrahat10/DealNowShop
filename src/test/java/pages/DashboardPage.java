@@ -61,8 +61,16 @@ public class DashboardPage extends BasePage {
     WebElement shippingWeight;
     @FindBy(xpath = "(//div[@class='control-group']/input)[1]")
     WebElement productInventories;
+    @FindBy(xpath = "(//i[@class='icon accordian-down-icon'])[5]")
+    WebElement clickImageAccordionIcon;
+
+    @FindBy(xpath = "//div[@class='accordian-header' and contains(text(),'Images')]")
+    WebElement accordionImageText;
+
     @FindBy(xpath = "//label[contains(text(),'Add Image')]")
-    WebElement addImage;
+    WebElement clickAddImage;
+    @FindBy(name = "images[]")
+    WebElement acceptImage;
     @FindBy(id = "49")
     WebElement categoriesProduct;
     @FindBy(xpath = "//select[@name='channels[]']") // Hasib Shop
@@ -134,45 +142,53 @@ public class DashboardPage extends BasePage {
     }
 
     public void editProductInfo() {
-        sleepFor(10);
+
         productName.clear();
         productName.sendKeys("Men winter" + new Faker().number().digits(3));
         System.out.println("Wait for element");
         scrollDown(4);
-        sleepFor(4);
 //        productVisible.click();
         js.executeScript("var elm = document.querySelector('input[id=visible_individually]'); elm.click();");
 
         productStatus.click();
+        scrollDown(3);
 
 //        guestCheckOut.click();
         js.executeScript("var elm = document.querySelector('input[id=guest_checkout]'); elm.click();");
 
-        sleepFor(4);
-        scrollDown(1);
+
+
 
         iframeShortDescription();
         shortDescription.clear();
         shortDescription.sendKeys("Product short description - Mend");
         exitIframe();
 
-        sleepFor(4);
         enterIframeDescription();
-        scrollDown(1);
+        scrollDown(2);
         shortDescription.clear();
         shortDescription.sendKeys("Normal description for the product");
         exitIframe();
-        sleepFor(5);
-        scrollDown(1);
-        productPrice.sendKeys(String.valueOf(10));
-        shippingWeight.sendKeys(String.valueOf(0.10));
-        scrollDown(1);
-        productInventories.sendKeys(String.valueOf(10));
 
-        addImage.sendKeys("C:\\Users\\rootnext\\Downloads\\denm.jpg");
-        sleepFor(4);
+        scrollDown(6);
+        //productPrice.sendKeys(String.valueOf(10));
+        js.executeScript("document.getElementById('price').value = 10");
+        js.executeScript("document.getElementById('weight').value = 0.10");
+
+        js.executeScript("document.querySelector(\"input[name='inventories[29]']\").value = 45");
+        scrollDown(3);
+        accordionImageText.click();
         scrollDown(1);
-        categoriesProduct.click();
+
+        clickAddImage.click();
+        scrollDown(1);
+        sleepFor(2);
+
+        acceptImage.sendKeys("C:\\Users\\rootnext\\Downloads\\denm.jpg");
+
+        scrollDown(1);
+        //categoriesProduct.click();
+        js.executeScript("document.getElementById('49').click();");
 
         Select prodChannel = new Select(productChannel);
         prodChannel.selectByVisibleText("Hasib Shop");
