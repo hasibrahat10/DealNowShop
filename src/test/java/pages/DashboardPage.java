@@ -3,7 +3,6 @@ package pages;
 
 import com.github.javafaker.Faker;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
@@ -17,39 +16,43 @@ public class DashboardPage extends BasePage {
 
 
     //Custom method declare for dashboard steps
+    // ======================== Add a new Product Simple Type Start  =========================
+    @FindBy(xpath = "//div/i[@class='icon remove-icon']")
+    WebElement skipSubscription;
+
     @FindBy(xpath = "//span[text()='Catalog']")
-    @CacheLookup
     WebElement menuCatalog;
+
     @FindBy(xpath = "//div[@class='aside-nav buynoir-aside']/ul/li/a[contains(text(),'Products')]")
-    @CacheLookup
     WebElement subMenuProducts;
+
     @FindBy(xpath = "//div[@class='page-action']/a")
-    @CacheLookup
     WebElement addProduct;
+
     @FindBy(id = "type") // select "Simple" type product
-    @CacheLookup
-    WebElement productType;
+            WebElement productType;
+
     @FindBy(id = "attribute_family_id") // select "Default"
-    @CacheLookup
-    WebElement attributeFamily;
+            WebElement attributeFamily;
     @FindBy(id = "sku")
-    @CacheLookup
     WebElement stockUnit;
     @FindBy(xpath = "//button[@type='submit' and @class='btn btn-lg btn-primary']")
-    @CacheLookup
     WebElement saveProductBtn;
     @FindBy(id = "name")
-    @CacheLookup
+
     WebElement productName;
     @FindBy(id = "url_key")
-    @CacheLookup
+
     WebElement productUrlKey;
-    @FindBy(id = "visible_individually")
+    //    @FindBy(xpath = "(//span[@class='slider round'])[3]")
+    @FindBy(css = "input[id=visible_individually]")
     WebElement productVisible;
-    @FindBy(id = "status")
-    WebElement productStatus;
-    @FindBy(id = "guest_checkout")
-    WebElement guestCheckOut;
+    @FindBy(xpath = "(//span[@class='slider round'])[4]")//Status
+            WebElement productStatus;
+    @FindBy(xpath = "(//span[@class='slider round'])[5]")//Guest Checkout
+            WebElement guestCheckOut;
+    @FindBy(xpath = "(//div[@class='accordian-header'])[2]")
+    WebElement clickAccordionHeader;
     @FindBy(id = "tinymce")
     WebElement shortDescription;
     @FindBy(id = "price")
@@ -65,6 +68,27 @@ public class DashboardPage extends BasePage {
     @FindBy(xpath = "//select[@name='channels[]']") // Hasib Shop
             WebElement productChannel;
 
+
+    // ============================= Tenant Profile Update =============================
+
+    @FindBy(xpath = "//span[text()='Tenant']")
+    WebElement menuTenant;
+
+    @FindBy(xpath = "//input[@name='first_name']")
+    WebElement tenantFirstName;
+    @FindBy(xpath = "//input[@name='last_name']")
+    WebElement tenantLastName;
+
+    @FindBy(xpath = "//input[@name='email']")
+    WebElement tenantEmail;
+
+    @FindBy(xpath = "//input[@name='phone']")
+    WebElement tenantPhone;
+
+    @FindBy(xpath = "//button[contains(text(),'Update Profile')]")
+    WebElement updateProfileBtn;
+
+
     //Define constructor
     public DashboardPage() {
 
@@ -72,6 +96,11 @@ public class DashboardPage extends BasePage {
     }
 
 //Declare custom method
+
+//    public  void dismissSubscriptionPlan(){
+//        skipSubscription.click();
+//        sleepFor(2);
+//    }
 
     public void clickCatalogMenu() {
         menuCatalog.click();
@@ -101,26 +130,24 @@ public class DashboardPage extends BasePage {
 
     public void clickOnSaveProduct() {
         saveProductBtn.click();
-        sleepFor(2);
+        sleepFor(5);
     }
 
     public void editProductInfo() {
         sleepFor(10);
         productName.clear();
         productName.sendKeys("Men winter" + new Faker().number().digits(3));
-
+        System.out.println("Wait for element");
+        scrollDown(4);
         sleepFor(4);
-
-//        productUrlKey.clear();
-//        productUrlKey.sendKeys("men");
-        scrollDown(1);
-        sleepFor(3);
-        scrollDownToElement(productVisible);
-        productVisible.click();
+//        productVisible.click();
+        js.executeScript("var elm = document.querySelector('input[id=visible_individually]'); elm.click();");
 
         productStatus.click();
 
-        guestCheckOut.click();
+//        guestCheckOut.click();
+        js.executeScript("var elm = document.querySelector('input[id=guest_checkout]'); elm.click();");
+
         sleepFor(4);
         scrollDown(1);
 
@@ -137,13 +164,10 @@ public class DashboardPage extends BasePage {
         exitIframe();
         sleepFor(5);
         scrollDown(1);
-        productPrice.clear();
-        productPrice.sendKeys("10");
-        shippingWeight.clear();
-        shippingWeight.sendKeys("0.020");
+        productPrice.sendKeys(String.valueOf(10));
+        shippingWeight.sendKeys(String.valueOf(0.10));
         scrollDown(1);
-        productInventories.clear();
-        productInventories.sendKeys("25");
+        productInventories.sendKeys(String.valueOf(10));
 
         addImage.sendKeys("C:\\Users\\rootnext\\Downloads\\denm.jpg");
         sleepFor(4);
@@ -170,6 +194,29 @@ public class DashboardPage extends BasePage {
 
     public void exitIframe() {
         driver.switchTo().defaultContent();
+    }
+
+    public void clickTenantMenu() {
+        menuTenant.click();
+    }
+
+    public void enterTenantInfo() {
+        sleepFor(3);
+        tenantFirstName.clear();
+        tenantFirstName.sendKeys("Hasib" + new Faker().number().digits(2));
+        tenantLastName.clear();
+        tenantLastName.sendKeys("rahat");
+        tenantEmail.clear();
+        tenantEmail.sendKeys("buynoirtest@yopmail.com");
+        tenantPhone.clear();
+        tenantPhone.sendKeys("123456" + new Faker().number().digits(2));
+
+
+    }
+
+    public void clickOnUpdateProfileButton() {
+        sleepFor(3);
+        updateProfileBtn.click();
     }
 
 

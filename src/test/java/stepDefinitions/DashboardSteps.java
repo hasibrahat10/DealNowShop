@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import pages.DashboardPage;
@@ -18,13 +19,9 @@ public class DashboardSteps extends BasePage {
     @Then("I click on catalog menu")
     public void i_click_on_catalog_menu() {
         new DashboardPage().clickCatalogMenu();
-    }
-
-    @Then("I click on products catalog")
-    public void i_click_on_products_catalog() {
-        new DashboardPage().clickProductCatalog();
 
     }
+
 
     @Then("I click on Add Product")
     public void i_click_on_Add_Product() {
@@ -42,6 +39,7 @@ public class DashboardSteps extends BasePage {
     public void i_click_on_save_product() {
         new DashboardPage().clickOnSaveProduct();
 
+
     }
 
     @Then("I have edit product info in details and click save")
@@ -49,5 +47,20 @@ public class DashboardSteps extends BasePage {
         new DashboardPage().editProductInfo();
 
     }
+
+
+    @Then("I click on Tenant menu item")
+    public void iClickOnTenantMenuItem() {
+        new DashboardPage().clickTenantMenu();
+
+    }
+
+    @And("Enter the tenant profile info and click update button")
+    public void enterTheTenantProfileInfoAndClickUpdateButton() {
+
+        new DashboardPage().enterTenantInfo();
+        new DashboardPage().clickOnUpdateProfileButton();
+    }
+
 
 }

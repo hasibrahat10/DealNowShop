@@ -29,18 +29,27 @@ public class BasePage {
 
     public static void scrollDown() {
         // This  will scroll down the page by  1000 pixel vertical
-        js.executeScript("window.scrollBy(0, 1000)");
+        js.executeScript("window.scrollBy(0, 100)");
     }
 
     public static void scrollDown(int count) {
         // This  will scroll down the page by  1000 pixel vertical
         for (int i = 0; i < count; i++) {
-            js.executeScript("window.scrollBy(0, 300)");
+            js.executeScript("window.scrollBy(0, 100)");
+            sleepFor(1);
         }
     }
 
     public static void scrollDownToElement(WebElement element) {
         js.executeScript("arguments[0].scrollIntoView();", element);
+    }
+
+    public static void sleepFor(int seconds) {
+        try {
+            Thread.sleep(1000 * seconds);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public void startDriver() {
@@ -65,14 +74,6 @@ public class BasePage {
     public void sleepFor() {
         try {
             Thread.sleep(1000 * 5);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void sleepFor(int seconds) {
-        try {
-            Thread.sleep(1000 * seconds);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
