@@ -24,7 +24,7 @@ public class CategoryPage extends BasePage {
     WebElement displayMode;
     @FindBy(id = "tinymce")
     WebElement shortDescri;
-//    @FindBy(xpath = "//input[@id='44' and @type='radio']")
+    //    @FindBy(xpath = "//input[@id='44' and @type='radio']")
     @FindBy(id = "44")
     WebElement categoryRoot;
     @FindBy(xpath = "//select[@name='attributes[]']/option[1]")

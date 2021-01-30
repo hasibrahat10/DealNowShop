@@ -22,7 +22,6 @@ Feature: Login DealNow Shop
 
   Scenario: User add a simple type product
     Then I click on catalog menu
-    Then I click on products catalog
     And I click on Add Product
     Then I fill the general info of Product
     And I click on save product

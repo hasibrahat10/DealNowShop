@@ -157,8 +157,6 @@ public class DashboardPage extends BasePage {
         js.executeScript("var elm = document.querySelector('input[id=guest_checkout]'); elm.click();");
 
 
-
-
         iframeShortDescription();
         shortDescription.clear();
         shortDescription.sendKeys("Product short description - Mend");
