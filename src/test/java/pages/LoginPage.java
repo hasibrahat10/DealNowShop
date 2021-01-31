@@ -8,7 +8,7 @@ import stepDefinitions.BasePage;
 public class LoginPage extends BasePage {
 
 
-    // To Find the Elements for the Login Page
+    // ==================  To Find the Elements for the Login Page ========================
     @FindBy(id = "email")
     WebElement emailID;
 
@@ -28,12 +28,12 @@ public class LoginPage extends BasePage {
     WebElement passwordError;
 
 
-    //constructor define
+    //====================  constructor define ========================
     public LoginPage() {
         PageFactory.initElements(driver, this);
     }
 
-    //Custom method declare for the Login steps
+    //======================  Custom method declare for the Login steps =============================
 
     public String getPageTitle() {
         return driver.getTitle();

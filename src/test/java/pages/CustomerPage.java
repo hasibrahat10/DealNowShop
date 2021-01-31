@@ -10,7 +10,7 @@ import stepDefinitions.BasePage;
 public class CustomerPage extends BasePage {
 
 
-    // Elements find for the add customer
+    // ========================   Elements find for the add customer ====================
     @FindBy(xpath = "//span[text()='Customers']")
     WebElement menuCustomers;
     @FindBy(xpath = "//div[@class='page-action']/a")
@@ -33,7 +33,7 @@ public class CustomerPage extends BasePage {
     WebElement saveCustomer;
 
 
-    // Add groups
+    //=============================  Add groups of customer ========================
 
     @FindBy(xpath = "//div[@class='aside-nav buynoir-aside']/ul/li/a[contains(text(),'Groups')]")
     WebElement subMenuGroups;
@@ -49,7 +49,6 @@ public class CustomerPage extends BasePage {
 
     @FindBy(xpath = "//button[contains(text(),'Save Group')]")
     WebElement saveGroup;
-
 
 
     public CustomerPage() {
@@ -94,15 +93,15 @@ public class CustomerPage extends BasePage {
         sleepFor(5);
     }
 
-    public void clickSubCategoryGroups(){
+    public void clickSubCategoryGroups() {
         subMenuGroups.click();
     }
 
-    public void clickAddGroup(){
+    public void clickAddGroup() {
         addGroups.click();
     }
 
-    public void enterGroupInfo(){
+    public void enterGroupInfo() {
         groupCode.clear();
         groupCode.sendKeys("Special");
 
@@ -110,7 +109,7 @@ public class CustomerPage extends BasePage {
         groupName.sendKeys("Special");
     }
 
-    public void clickSaveGroup(){
+    public void clickSaveGroup() {
         saveGroup.click();
         sleepFor(4);
     }

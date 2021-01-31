@@ -15,7 +15,6 @@ public class DashboardPage extends BasePage {
     WebElement menuDashboard;
 
 
-    //Custom method declare for dashboard steps
     // ======================== Add a new Product Simple Type Start  =========================
     @FindBy(xpath = "//div/i[@class='icon remove-icon']")
     WebElement skipSubscription;
@@ -103,7 +102,7 @@ public class DashboardPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-//Declare custom method
+    //=============================  Custom method declare for dashboard steps ========================
 
 //    public  void dismissSubscriptionPlan(){
 //        skipSubscription.click();

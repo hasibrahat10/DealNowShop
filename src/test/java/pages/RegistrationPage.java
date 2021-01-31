@@ -5,15 +5,15 @@ import stepDefinitions.BasePage;
 
 public class RegistrationPage extends BasePage {
 
-    //To Find the Elements for the Registration Page
+    // ===================  To Find the Elements for the Registration Page ===========================
 
 
-    //constructor define
+    //=====================  constructor define ===============================
     public RegistrationPage() {
         PageFactory.initElements(driver, this);
     }
 
-    //Custom Method declare for the steps
+    //========================= Custom Method declare for the steps =======================
 
 
 }
