@@ -11,8 +11,7 @@ import java.util.List;
 
 public class SettingsPage extends BasePage {
     // ==========================  Element for the locales =============================
-    @FindBy(xpath = "//div[@class='aside-nav buynoir-aside']/ul/li/a[contains(text(),'Currencies')]")
-    WebElement subMenuCurrencies;
+
     @FindBy(xpath = "//span[text()='Settings']")
     WebElement menuSettings;
     @FindBy(xpath = "//div[@class='page-action']/a")
@@ -30,6 +29,8 @@ public class SettingsPage extends BasePage {
 
 
     //===========================  Add a new currency ==================================
+    @FindBy(xpath = "//div[@class='aside-nav buynoir-aside']/ul/li/a[contains(text(),'Currencies')]")
+    WebElement subMenuCurrencies;
     @FindBy(xpath = "//div[@class='page-action']/a")
     WebElement addCurrency;
     @FindBy(id = "code")
@@ -283,7 +284,7 @@ public class SettingsPage extends BasePage {
 
     public void generalInfoPass() {
         userName.sendKeys("Demo User");
-        userEmail.sendKeys("hasib" +new Faker().number().digits(2) +"@yopmail.com");
+        userEmail.sendKeys("hasib" + new Faker().number().digits(2) + "@yopmail.com");
         scrollDown(2);
 
         userPassword.sendKeys("test12345");

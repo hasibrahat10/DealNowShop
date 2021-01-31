@@ -118,6 +118,8 @@ public class SettingsSteps extends BasePage {
     public void iClickOnSaveUser() {
         new SettingsPage().clickOnSaveUser();
     }
+
+
 }
 
 

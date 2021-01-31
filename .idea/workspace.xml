@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d98b3295-3442-403b-ad44-2a5d47cdac8e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/features/Settings.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/SettingsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/SettingsSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/features/Sales.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/SalesPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/SalesSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/features/Customers.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/Customers.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/CustomerPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/CustomerPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/DashboardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/DashboardPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/RegistrationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/CustomerPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/CustomerPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/DashboardPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/DashboardPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/Registration.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/Registration.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/SettingsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/SettingsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/SettingsSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/SettingsSteps.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +53,7 @@
       <recent name="F:\DealNowShop" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber java.Scenario: Add an user role">
+  <component name="RunManager" selected="Cucumber java.Scenario: Complete a sales order">
     <configuration name="Scenario: Add a currency for exchange" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/Settings.feature" />
@@ -115,25 +111,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Add a locale in the locales" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/Settings.feature" />
-      <option name="GLUE" value="stepDefinitions" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="DealNowShop" />
-      <option name="NAME_FILTER" value="^Add a locale in the locales$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Add a locale in the locales$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Add a locale in the locales" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Scenario: Add an user role" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/Settings.feature" />
@@ -153,13 +130,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Scenario: Complete a sales order" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/Sales.feature" />
+      <option name="GLUE" value="stepDefinitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="DealNowShop" />
+      <option name="NAME_FILTER" value="^Complete a sales order$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Complete a sales order$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Complete a sales order" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber java.Scenario: Complete a sales order" />
         <item itemvalue="Cucumber java.Scenario: Add an user role" />
         <item itemvalue="Cucumber java.Scenario: Add a inventory sources" />
         <item itemvalue="Cucumber java.Scenario: Add a currency for exchange" />
         <item itemvalue="Cucumber java.Scenario: Add a currency" />
-        <item itemvalue="Cucumber java.Scenario: Add a locale in the locales" />
       </list>
     </recent_temporary>
   </component>
@@ -195,26 +191,26 @@
       <screen x="0" y="40" width="1536" height="824" />
     </state>
     <state x="499" y="199" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.40.1536.824@0.40.1536.824" timestamp="1611594954239" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1612080128267">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1612084246329">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
     <state width="1323" height="239" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1611920443120" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.40.1536.824@0.40.1536.824" timestamp="1612080128267" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1612080128266">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.40.1536.824@0.40.1536.824" timestamp="1612084246329" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1612084246329">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
     <state width="1323" height="239" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1611920443120" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.40.1536.824@0.40.1536.824" timestamp="1612080128266" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1612080128266">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.40.1536.824@0.40.1536.824" timestamp="1612084246329" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1612084246329">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
     <state width="1323" height="239" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1611920443120" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.40.1536.824@0.40.1536.824" timestamp="1612080128266" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1612080128266">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.40.1536.824@0.40.1536.824" timestamp="1612084246329" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1612084246329">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
     <state width="1323" height="239" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1611920443120" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.40.1536.824@0.40.1536.824" timestamp="1612080128266" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.40.1536.824@0.40.1536.824" timestamp="1612084246329" />
     <state x="207" y="47" key="SettingsEditor" timestamp="1612072060170">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
