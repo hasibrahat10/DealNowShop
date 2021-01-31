@@ -31,4 +31,6 @@ public class SalesSteps extends BasePage {
     public void iClickOnInvoiceButtonAndSaveInvoice() {
         new SalesPage().setSaveInvoice();
     }
+
+
 }
