@@ -1,6 +1,6 @@
 package stepDefinitions;
 
-import com.github.javafaker.Faker;
+import helper.FileHelper;
 import org.apache.commons.lang.RandomStringUtils;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -15,33 +16,45 @@ import java.util.logging.Logger;
 public class BasePage {
     public static WebDriver driver;
     public static JavascriptExecutor js;
+    protected static String scenarioName;
+    protected static boolean REMOTE_TEST;
+    private static DesiredCapabilities caps = new DesiredCapabilities();
 
-    //Created for generating random string for unique email
+    //================   RANDOM STRING GENERATE  ========================
     public static String randomString() {
         String generatedString = RandomStringUtils.randomAlphabetic(5);
         return (generatedString);
     }
 
-    public static String randomEmail() {
-        String emailID = "hasib" + new Faker().number().digits(3) + "@yopmail.com";
-        return (emailID);
+    //=================================   START DRIVER  =======================================
+    public void startDriver() {
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--ignore-certificate-errors");
+        System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY, System.getProperty("user.dir") + "/drivers/chromedriver_win32/chromedriver.exe");
+        System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
+        System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY, "true");
+        caps.setCapability("name", REMOTE_TEST ? scenarioName : null);
+
+        Logger.getLogger("").setLevel(Level.OFF);
+        driver = new ChromeDriver(chromeOptions);
+        js = (JavascriptExecutor) driver;
     }
 
-    public static void scrollDown() {
-        // This  will scroll down the page by  1000 pixel vertical
-        js.executeScript("window.scrollBy(0, 100)");
-    }
-
-    public static void scrollDown(int count) {
-        // This  will scroll down the page by  1000 pixel vertical
-        for (int i = 0; i < count; i++) {
-            js.executeScript("window.scrollBy(0, 100)");
-            sleepFor(1);
+    //=============================   STOP DRIVER  =======================================
+    public void stopDriver() {
+        if (driver != null) {
+            driver.quit();
+            FileHelper.take_screenshot();
         }
     }
 
-    public static void scrollDownToElement(WebElement element) {
-        js.executeScript("arguments[0].scrollIntoView();", element);
+    //=============================   SLEEP ACTIVITIES  =======================================
+    public void sleepFor() {
+        try {
+            Thread.sleep(1000 * 5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void sleepFor(int seconds) {
@@ -52,29 +65,26 @@ public class BasePage {
         }
     }
 
-    public void startDriver() {
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--ignore-certificate-errors");
-        System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY, System.getProperty("user.dir") + "/drivers/chromedriver_win32/chromedriver.exe");
-        System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
-        System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY, "true");
-        Logger.getLogger("").setLevel(Level.OFF);
-        driver = new ChromeDriver(chromeOptions);
-        js = (JavascriptExecutor) driver;
+    //=============================   SCROLL DOWN  =======================================
+    public static void scrollDown() {
+        // This  will scroll down the page by  100 pixel vertical
+        js.executeScript("window.scrollBy(0, 100)");
     }
 
-    public void stopDriver() {
-        if (driver != null) {
-            driver.quit();
+
+    public static void scrollDown(int count) {
+        // This  will scroll down the page by  100 pixel vertical
+        for (int i = 0; i < count; i++) {
+            js.executeScript("window.scrollBy(0, 100)");
+            sleepFor(1);
         }
     }
 
-    public void sleepFor() {
-        try {
-            Thread.sleep(1000 * 5);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
+    //======================== WAIT ELEMENT CLICK  ==============================
+    public static void scrollDownToElement(WebElement element) {
+        js.executeScript("arguments[0].scrollIntoView();", element);
     }
+
 
 }

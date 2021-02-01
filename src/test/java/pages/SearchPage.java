@@ -44,11 +44,10 @@ public class SearchPage extends BasePage {
         return (tableRows.size());
     }
 
- public boolean getResultDisplayed(){
+    public boolean getResultDisplayed() {
         return searchResText.isDisplayed();
 
- }
-
+    }
 
 
 }
