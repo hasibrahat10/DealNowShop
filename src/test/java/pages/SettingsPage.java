@@ -7,8 +7,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import stepDefinitions.BasePage;
 
-import java.util.List;
-
 public class SettingsPage extends BasePage {
     // ==========================  Element for the locales =============================
 
@@ -46,10 +44,10 @@ public class SettingsPage extends BasePage {
     @FindBy(xpath = "//div[@class='aside-nav buynoir-aside']/ul/li/a[contains(text(),'Exchange Rates')]")
     WebElement subMenuExCurrency;
 
-    @FindBy(xpath = "//div[@class='page-action']/a")
+    @FindBy(xpath = "//a[contains(text(),'Add Exchange Rate')]")
     WebElement addExchangeRate;
 
-    @FindBy(xpath = "//select[@name='target_currency']")
+    @FindBy(xpath = "//*[@name='target_currency']")
     WebElement targetCurrency;
 
     @FindBy(id = "rate")
@@ -89,8 +87,8 @@ public class SettingsPage extends BasePage {
     @FindBy(id = "contact_number")
     WebElement inventoryContactNumber;
 
-    @FindBy(id = "country")
-    List<WebElement> sourceCountry; // select Bangladesh
+    @FindBy(xpath = "//select[@id='country']")
+    WebElement sourceCountry; // select Bangladesh
 
     @FindBy(id = "state")
     WebElement sourceState;
@@ -202,6 +200,8 @@ public class SettingsPage extends BasePage {
 
     public void enterCurrencyRateInfo() {
         Select targetCur = new Select(targetCurrency);
+        sleepFor(2);
+        System.out.println(targetCur.getOptions().size());
         targetCur.selectByVisibleText("Bangla"); // problem to select it
 
         sleepFor(2);
@@ -233,6 +233,7 @@ public class SettingsPage extends BasePage {
         inventoryDesc.sendKeys("Another stock for products");
 
         scrollDown(3);
+        inventoryPriority.clear();
         inventoryPriority.sendKeys("2");
 
         js.executeScript("var status = document.querySelector('input[id=status]'); status.click();");
@@ -242,30 +243,32 @@ public class SettingsPage extends BasePage {
     }
 
     public void enterContactInformation() {
+        inventoryContactName.clear();
         inventoryContactName.sendKeys("Hasib");
+        inventoryContactEmail.clear();
         inventoryContactEmail.sendKeys("hasib90@yopmail.com");
         scrollDown(1);
+        inventoryContactNumber.clear();
         inventoryContactNumber.sendKeys("123456");
         scrollDown(2);
     }
 
     // Problem to select country
     public void SelectSourceCountry(String value) {
-        for (WebElement dropElement : sourceCountry) {
-            if (dropElement.getText().equals(value)) {
-                dropElement.click();
-                break;
-            }
-        }
+        Select chooseCountry = new Select(sourceCountry);
+        chooseCountry.selectByVisibleText(value);
     }
 
     public void enterSourceAddress() {
-
+        sourceState.clear();
         sourceState.sendKeys("BD");
         scrollDown(2);
+        sourceCity.clear();
         sourceCity.sendKeys("Dhaka");
+        sourceStreet.clear();
         sourceStreet.sendKeys("1697,RBG");
         scrollDown(1);
+        sourcePostcode.clear();
         sourcePostcode.sendKeys("1236");
 
     }

@@ -60,7 +60,9 @@ public class PromotionsPage extends BasePage {
     }
 
     public void setRulesInfo() {
+        ruleName.clear();
         ruleName.sendKeys("Demo Gift" + new Faker().number().digits(2));
+        ruleDescription.clear();
         ruleDescription.sendKeys("Demo promotions sales");
         scrollDown(2);
         js.executeScript("var status = document.querySelector('input[id=status]'); status.click();");
@@ -72,7 +74,16 @@ public class PromotionsPage extends BasePage {
         channel.selectByVisibleText("Hasib Shop");
         scrollDown(2);
         Select cusGroup = new Select(customerGroup);
-        cusGroup.selectByVisibleText("General");
+        if (cusGroup.isMultiple()) {
+            cusGroup.selectByVisibleText("General");
+            cusGroup.selectByVisibleText("Special");
+            cusGroup.selectByVisibleText("Wholesale");
+        } else {
+            cusGroup.selectByVisibleText("General");
+        }
+
+        dateFrom.sendKeys("2021-02-01"); //year-month-date
+        endTill.sendKeys("2021-02-04");//year-month-date
 
         scrollDown(2);
 
