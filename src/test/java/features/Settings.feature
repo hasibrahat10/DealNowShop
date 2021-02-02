@@ -8,6 +8,7 @@ Feature: DealNow shop settings
     Then I click on add locale button
     Then I enter the add locale general info
     And I click on save locale button
+    Then I should see the success message
 
   Scenario: Add a currency
     Then I click on currency sub category

@@ -24,7 +24,7 @@ public class FileHelper extends BasePage {
         String currentTime = formatter.format(cal.getTime()).replace(':', '_');
         if (driver != null) {
             try {
-                String screenshot_name = clean_string(scenarioName) + "_" + currentTime + ".png";
+                String screenshot_name = clean_string(scenarioName) + "_" + ".png";
                 screenshot_file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
                 FileUtils.copyFile(screenshot_file, new File(FileHelper.SCREENSHOT_DIR + screenshot_name));
             } catch (IOException e) {

@@ -1,6 +1,7 @@
 package pages;
 
 import com.github.javafaker.Faker;
+import helper.WaitHelper;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -15,7 +16,7 @@ public class SettingsPage extends BasePage {
     @FindBy(xpath = "//div[@class='page-action']/a")
     WebElement addLocale;
     @FindBy(id = "code")
-    WebElement localeCOde;
+    WebElement localeCode;
     @FindBy(id = "name")
     WebElement localeName;
     @FindBy(id = "direction")
@@ -25,6 +26,8 @@ public class SettingsPage extends BasePage {
     @FindBy(xpath = "//button[contains(text(),'Save Locale')]")
     WebElement saveLocale;
 
+    @FindBy(xpath = "//p[text()='Locale created successfully.']")
+    WebElement successAlert;
 
     //===========================  Add a new currency ==================================
     @FindBy(xpath = "//div[@class='aside-nav buynoir-aside']/ul/li/a[contains(text(),'Currencies')]")
@@ -153,9 +156,9 @@ public class SettingsPage extends BasePage {
     }
 
     public void enterGeneralLocalInfo() {
-        localeCOde.sendKeys("bn-BGD");
+        localeCode.sendKeys("en_GB");
 
-        localeName.sendKeys("Bangla");
+        localeName.sendKeys("United Kingdom");
 
         Select direction = new Select(localeDirection);
         direction.selectByVisibleText("LTR");
@@ -164,8 +167,13 @@ public class SettingsPage extends BasePage {
     }
 
     public void clickSaveLocale() {
+        waitForVisibility(saveLocale);
         saveLocale.click();
-        sleepFor(4);
+
+    }
+
+    public boolean setSuccessAlert(){
+        return waitForVisibility(successAlert);
     }
 
     public void clickCurrencyMenu() {
@@ -306,5 +314,7 @@ public class SettingsPage extends BasePage {
         saveUser.click();
         sleepFor(3);
     }
+
+
 
 }

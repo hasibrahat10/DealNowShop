@@ -2,14 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d98b3295-3442-403b-ad44-2a5d47cdac8e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/helper/FileHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/screenshot/Add_a_locale_in_the_locales_.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/screenshot/Add_a_locale_in_the_locales_2021-02-02.15_22_38.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/screenshot/Add_a_locale_in_the_locales_2021-02-02.15_25_20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/screenshot/Add_a_locale_in_the_locales_2021-02-02.15_30_04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/screenshot/Search_a_product_by_name_2021-02-02.13_07_07.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/SearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/SearchPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/features/Settings.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/Settings.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/helper/FileHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helper/FileHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/helper/WaitHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helper/WaitHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/SettingsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/SettingsPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/SearchSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/SearchSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/SettingsSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/SettingsSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/helper/FileHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/helper/FileHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/helper/WaitHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/helper/WaitHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pages/SettingsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/SettingsPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/stepDefinitions/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/stepDefinitions/BasePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/stepDefinitions/Hooks.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/stepDefinitions/Hooks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/stepDefinitions/SettingsSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/stepDefinitions/SettingsSteps.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +55,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../java-mc-api-test" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -54,7 +67,7 @@
       <recent name="F:\DealNowShop" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber java.Scenario: Search a product by name">
+  <component name="RunManager" selected="Cucumber java.Scenario: Add a locale in the locales">
     <configuration name="Scenario: Add a catalog rule" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/Promotions.feature" />
@@ -112,6 +125,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Scenario: Add a locale in the locales" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/Settings.feature" />
+      <option name="GLUE" value="stepDefinitions" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="DealNowShop" />
+      <option name="NAME_FILTER" value="^Add a locale in the locales$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Add a locale in the locales$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Add a locale in the locales" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Scenario: Search a product by name" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/SearchContent.feature" />
@@ -131,32 +163,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Set the general configuration" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/features/Configure.feature" />
-      <option name="GLUE" value="stepDefinitions" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="DealNowShop" />
-      <option name="NAME_FILTER" value="^Set the general configuration$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Set the general configuration$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Set the general configuration" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber java.Scenario: Add a locale in the locales" />
         <item itemvalue="Cucumber java.Scenario: Search a product by name" />
         <item itemvalue="Cucumber java.Scenario: Add a catalog rule" />
         <item itemvalue="Cucumber java.Scenario: Add a inventory sources" />
         <item itemvalue="Cucumber java.Scenario: Add a currency for exchange" />
-        <item itemvalue="Cucumber java.Scenario: Set the general configuration" />
       </list>
     </recent_temporary>
   </component>
@@ -173,15 +186,18 @@
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="499" y="207" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1612200663949">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
     <state x="499" y="207" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.40.1536.824@0.40.1536.824" timestamp="1612200663949" />
-    <state x="597" y="326" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1612198689063">
-      <screen x="0" y="40" width="1536" height="824" />
+    <state x="531" y="253" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1612245543812">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="531" y="253" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.728@0.0.1366.728" timestamp="1612162281124" />
+    <state x="531" y="253" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.728@0.0.1366.728" timestamp="1612245543812" />
     <state x="597" y="326" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.40.1536.824@0.40.1536.824" timestamp="1612198689063" />
     <state x="408" y="153" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1612070079188">
       <screen x="0" y="40" width="1536" height="824" />
@@ -196,25 +212,25 @@
       <screen x="0" y="40" width="1536" height="824" />
     </state>
     <state x="549" y="207" key="FileChooserDialogImpl/0.40.1536.824@0.40.1536.824" timestamp="1612200043713" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1612202544370">
-      <screen x="0" y="40" width="1536" height="824" />
+    <state width="1323" height="157" key="GridCell.Tab.0.bottom" timestamp="1612265350693">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="183" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1612189583990" />
+    <state width="1323" height="157" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1612265350693" />
     <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.40.1536.824@0.40.1536.824" timestamp="1612202544370" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1612202544370">
-      <screen x="0" y="40" width="1536" height="824" />
+    <state width="1323" height="157" key="GridCell.Tab.0.center" timestamp="1612265350693">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="183" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1612189583990" />
+    <state width="1323" height="157" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1612265350693" />
     <state width="1493" height="210" key="GridCell.Tab.0.center/0.40.1536.824@0.40.1536.824" timestamp="1612202544370" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1612202544370">
-      <screen x="0" y="40" width="1536" height="824" />
+    <state width="1323" height="157" key="GridCell.Tab.0.left" timestamp="1612265350693">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="183" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1612189583990" />
+    <state width="1323" height="157" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1612265350693" />
     <state width="1493" height="210" key="GridCell.Tab.0.left/0.40.1536.824@0.40.1536.824" timestamp="1612202544370" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1612202544370">
-      <screen x="0" y="40" width="1536" height="824" />
+    <state width="1323" height="157" key="GridCell.Tab.0.right" timestamp="1612265350693">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="183" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1612189583990" />
+    <state width="1323" height="157" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1612265350693" />
     <state width="1493" height="210" key="GridCell.Tab.0.right/0.40.1536.824@0.40.1536.824" timestamp="1612202544370" />
     <state x="213" y="19" key="Maven.ArtifactSearchDialog" timestamp="1612171702090">
       <screen x="0" y="0" width="1366" height="728" />
@@ -225,9 +241,24 @@
     </state>
     <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1611813850739" />
     <state x="207" y="47" key="SettingsEditor/0.40.1536.824@0.40.1536.824" timestamp="1612108132778" />
+    <state x="65" y="59" key="new project wizard" timestamp="1612259212121">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="65" y="59" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1612259212121" />
     <state x="521" y="374" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog" timestamp="1611595611808">
       <screen x="0" y="40" width="1536" height="824" />
     </state>
     <state x="521" y="374" key="org.jetbrains.plugins.cucumber.inspections.ui.CreateStepDefinitionFileDialog/0.40.1536.824@0.40.1536.824" timestamp="1611595611808" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/stepDefinitions/BasePage.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -2,6 +2,7 @@ package stepDefinitions;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
 import pages.SettingsPage;
 
 public class SettingsSteps extends BasePage {
@@ -25,6 +26,11 @@ public class SettingsSteps extends BasePage {
     @And("I click on save locale button")
     public void iClickOnSaveLocaleButton() {
         new SettingsPage().clickSaveLocale();
+    }
+
+    @Then("I should see the success message")
+    public void iShouldSeeTheSuccessMessage() {
+        Assert.assertEquals(new SettingsPage().setSuccessAlert(), true);
     }
 
     @Then("I click on currency sub category")
@@ -118,6 +124,7 @@ public class SettingsSteps extends BasePage {
     public void iClickOnSaveUser() {
         new SettingsPage().clickOnSaveUser();
     }
+
 
 
 }

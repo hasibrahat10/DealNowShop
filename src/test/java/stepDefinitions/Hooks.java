@@ -1,6 +1,7 @@
 package stepDefinitions;
 
 
+import helper.FileHelper;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -19,6 +20,7 @@ public class Hooks extends BasePage {
 
     @After
     public void tearDown() {
+        FileHelper.take_screenshot();
         stopDriver();
     }
 

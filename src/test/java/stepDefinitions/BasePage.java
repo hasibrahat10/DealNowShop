@@ -3,13 +3,16 @@ package stepDefinitions;
 import helper.FileHelper;
 import org.apache.commons.lang.RandomStringUtils;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.FluentWait;
 
+import java.time.Duration;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -44,7 +47,6 @@ public class BasePage {
     public void stopDriver() {
         if (driver != null) {
             driver.quit();
-            FileHelper.take_screenshot();
         }
     }
 
@@ -80,6 +82,29 @@ public class BasePage {
         }
     }
 
+    int defaultWaitTime = 10;
+    private FluentWait<String> wait = new FluentWait<>("")
+            .withTimeout(Duration.ofSeconds(defaultWaitTime))
+            .pollingEvery(Duration.ofMillis(400))
+            .ignoring(NoSuchElementException.class, NullPointerException.class);
+
+    public boolean waitForVisibility(WebElement element, int seconds) {
+        return wait.withTimeout(Duration.ofSeconds(seconds))
+                .until(a -> isElementVisible(element));
+    }
+
+    public boolean waitForVisibility(WebElement element) {
+        return wait.withTimeout(Duration.ofSeconds(defaultWaitTime))
+                .until(a -> isElementVisible(element));
+    }
+
+    public boolean isElementVisible(WebElement elm) {
+        try {
+            return elm.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
 
     //======================== WAIT ELEMENT CLICK  ==============================
     public static void scrollDownToElement(WebElement element) {
