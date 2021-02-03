@@ -15,7 +15,8 @@ public class Hooks extends BasePage {
         startDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-        driver.get("http://dealnow.buynoir.co/admin/login");
+//        driver.get("http://dealnow.buynoir.co/admin/login");
+        driver.get("http://dealnow.buynoir.co/");
     }
 
     @After

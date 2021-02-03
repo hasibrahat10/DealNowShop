@@ -1,7 +1,6 @@
 package pages;
 
 import com.github.javafaker.Faker;
-import helper.WaitHelper;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -172,7 +171,7 @@ public class SettingsPage extends BasePage {
 
     }
 
-    public boolean setSuccessAlert(){
+    public boolean setSuccessAlert() {
         return waitForVisibility(successAlert);
     }
 
@@ -314,7 +313,6 @@ public class SettingsPage extends BasePage {
         saveUser.click();
         sleepFor(3);
     }
-
 
 
 }

@@ -1,6 +1,6 @@
 package stepDefinitions;
 
-import helper.FileHelper;
+import helper.Constants;
 import org.apache.commons.lang.RandomStringUtils;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
@@ -22,6 +22,11 @@ public class BasePage {
     protected static String scenarioName;
     protected static boolean REMOTE_TEST;
     private static DesiredCapabilities caps = new DesiredCapabilities();
+    int defaultWaitTime = 10;
+    private FluentWait<String> wait = new FluentWait<>("")
+            .withTimeout(Duration.ofSeconds(defaultWaitTime))
+            .pollingEvery(Duration.ofMillis(400))
+            .ignoring(NoSuchElementException.class, NullPointerException.class);
 
     //================   RANDOM STRING GENERATE  ========================
     public static String randomString() {
@@ -29,11 +34,38 @@ public class BasePage {
         return (generatedString);
     }
 
+    public static void sleepFor(int seconds) {
+        try {
+            Thread.sleep(1000 * seconds);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //=============================   SCROLL DOWN  =======================================
+    public static void scrollDown() {
+        // This  will scroll down the page by  100 pixel vertical
+        js.executeScript("window.scrollBy(0, 100)");
+    }
+
+    public static void scrollDown(int count) {
+        // This  will scroll down the page by  100 pixel vertical
+        for (int i = 0; i < count; i++) {
+            js.executeScript("window.scrollBy(0, 100)");
+            sleepFor(1);
+        }
+    }
+
+    //======================== WAIT ELEMENT CLICK  ==============================
+    public static void scrollDownToElement(WebElement element) {
+        js.executeScript("arguments[0].scrollIntoView();", element);
+    }
+
     //=================================   START DRIVER  =======================================
     public void startDriver() {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--ignore-certificate-errors");
-        System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY, System.getProperty("user.dir") + "/drivers/chromedriver_win32/chromedriver.exe");
+        System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY, Constants.USER_DIR + "/drivers/chromedriver_win32/chromedriver.exe");
         System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
         System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY, "true");
         caps.setCapability("name", REMOTE_TEST ? scenarioName : null);
@@ -59,35 +91,6 @@ public class BasePage {
         }
     }
 
-    public static void sleepFor(int seconds) {
-        try {
-            Thread.sleep(1000 * seconds);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
-
-    //=============================   SCROLL DOWN  =======================================
-    public static void scrollDown() {
-        // This  will scroll down the page by  100 pixel vertical
-        js.executeScript("window.scrollBy(0, 100)");
-    }
-
-
-    public static void scrollDown(int count) {
-        // This  will scroll down the page by  100 pixel vertical
-        for (int i = 0; i < count; i++) {
-            js.executeScript("window.scrollBy(0, 100)");
-            sleepFor(1);
-        }
-    }
-
-    int defaultWaitTime = 10;
-    private FluentWait<String> wait = new FluentWait<>("")
-            .withTimeout(Duration.ofSeconds(defaultWaitTime))
-            .pollingEvery(Duration.ofMillis(400))
-            .ignoring(NoSuchElementException.class, NullPointerException.class);
-
     public boolean waitForVisibility(WebElement element, int seconds) {
         return wait.withTimeout(Duration.ofSeconds(seconds))
                 .until(a -> isElementVisible(element));
@@ -104,11 +107,6 @@ public class BasePage {
         } catch (Exception e) {
             return false;
         }
-    }
-
-    //======================== WAIT ELEMENT CLICK  ==============================
-    public static void scrollDownToElement(WebElement element) {
-        js.executeScript("arguments[0].scrollIntoView();", element);
     }
 
 

@@ -1,79 +1,68 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/java/features/Login.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/java/features/Store.feature");
 formatter.feature({
-  "name": "Login DealNow Shop",
+  "name": "DealNow shop storefront feature",
   "description": "",
   "keyword": "Feature"
 });
-formatter.scenarioOutline({
-  "name": "User can login with valid credentials",
+formatter.scenario({
+  "name": "Login with valid credentials as customer",
   "description": "",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "name": "I am on admin login screen",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "I enter user email as \"\u003cemail\u003e\" and password as \"\u003cpassword\u003e\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "name": "I click on sign in button",
-  "keyword": "And "
-});
-formatter.examples({
-  "name": "",
-  "description": "",
-  "keyword": "Examples",
-  "rows": [
+  "keyword": "Scenario",
+  "tags": [
     {
-      "cells": [
-        "email",
-        "password"
-      ]
-    },
-    {
-      "cells": [
-        "buynoirtest@mailinator.com",
-        "test12345"
-      ]
+      "name": "@test-customerLogin"
     }
   ]
-});
-formatter.scenario({
-  "name": "User can login with valid credentials",
-  "description": "",
-  "keyword": "Scenario Outline"
 });
 formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "I am on admin login screen",
-  "keyword": "Then "
+  "name": "I hover mouse on sign in icon",
+  "keyword": "Given "
 });
 formatter.match({
-  "location": "stepDefinitions.LoginSteps.i_am_on_admin_login_screen()"
+  "location": "stepDefinitions.StoreSteps.i_hover_mouse_on_sign_in_icon()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I enter user email as \"buynoirtest@mailinator.com\" and password as \"test12345\"",
+  "name": "I click on store sign in button",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.LoginSteps.iEnterUserEmailAsAndPasswordAs(java.lang.String,java.lang.String)"
+  "location": "stepDefinitions.StoreSteps.i_click_on_store_sign_in_button()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I click on sign in button",
-  "keyword": "And "
+  "name": "I have enter login details for customer",
+  "keyword": "Then "
 });
 formatter.match({
-  "location": "stepDefinitions.LoginSteps.iClickOnSignInButton()"
+  "location": "stepDefinitions.StoreSteps.i_have_enter_login_details_for_customer()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click on login button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "stepDefinitions.StoreSteps.i_click_on_login_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I am on customer profile panel",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "stepDefinitions.StoreSteps.i_am_on_customer_profile_panel()"
 });
 formatter.result({
   "status": "passed"
