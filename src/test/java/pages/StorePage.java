@@ -44,6 +44,42 @@ public class StorePage extends BasePage {
     @FindBy(xpath = "//h1[text()='Thank you for your order!']")
     WebElement thanksText;
 
+
+    //=============================  Billing Address Field ===============================
+    @FindBy(id = "billing[company_name]")
+    WebElement companyName;
+
+    @FindBy(id = "billing[first_name]")
+    WebElement billFName;
+
+    @FindBy(id = "billing[last_name]")
+    WebElement billLName;
+
+    @FindBy(id = "billing[email]")
+    WebElement billEmail;
+    @FindBy(id = "billing_address_0")
+    WebElement billAddress;
+    @FindBy(id = "billing[city]")
+    WebElement billCity;
+    @FindBy(xpath = "//select[@id='billing[country]']")
+    WebElement billCountry;
+    @FindBy(id = "billing[state]")
+    WebElement billState;
+    @FindBy(id = "billing[postcode]")
+    WebElement billPostCode;
+    @FindBy(id = "billing[phone]")
+    WebElement billPhone;
+
+    @FindBy(id = "billing[use_for_shipping]")
+    WebElement billShipping;
+    @FindBy(id = "stripe")//stripe method choose
+    WebElement billStripe;
+
+
+
+
+
+
     public StorePage() {
         PageFactory.initElements(driver, this);
     }
@@ -124,6 +160,10 @@ public class StorePage extends BasePage {
     public boolean displayedThankText() {
         sleepFor(4);
         return thanksText.isDisplayed();
+    }
+
+    public void billingAddressDetails(){
+        
     }
 
 }

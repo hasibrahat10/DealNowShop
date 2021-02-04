@@ -2,29 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d98b3295-3442-403b-ad44-2a5d47cdac8e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/screenshot/Checkout_an_order_from_the_store_.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/results/screenshot/Login_with_valid_credentials_as_customer_.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/features/Store.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/helper/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/StorePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/StoreSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/screenshot/Add_a_locale_in_the_locales_.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/screenshot/Add_a_locale_in_the_locales_2021-02-02.15_22_38.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/screenshot/Add_a_locale_in_the_locales_2021-02-02.15_25_20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/screenshot/Add_a_locale_in_the_locales_2021-02-02.15_30_04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/screenshot/Search_a_product_by_name_2021-02-02.13_07_07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/helper/WaitHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/helper/WaitHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/SettingsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/SettingsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/SettingsSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/SettingsSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testRunner/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testRunner/TestRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/stepDefinitions/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/stepDefinitions/BasePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/stepDefinitions/Hooks.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/stepDefinitions/Hooks.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/testRunner/TestRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/testRunner/TestRunner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/report.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/StorePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/StorePage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
